@@ -19,3 +19,4 @@ class StudentViewSet(ModelViewSet):
     search_fields = ['name']
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     pagination_class = CustomPagination
+    permission_classes = [IsAuthenticated]
